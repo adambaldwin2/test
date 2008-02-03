@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>document.location test</title>
+
+<script type="text/javascript">
+
+function redir( number )
+{
+	k = document;
+	k.location =  'http://loca' + 'lhost/w' + number + 'af/';
+
+}
+
+</script>
+
+</head>
+<body>
+
+<h1>Redirection</h1>
+
+<a onclick="redir(3);" ID="Button5">Redirect to the w3af test page.</a>
+<h1 id="res"></h1>
+
+<a onclick="redir(4);">Another redirect</a>
+
+
+</body>
+</html>
