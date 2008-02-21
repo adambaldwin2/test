@@ -314,6 +314,7 @@ function eventsOnAfterPage()
 
       elm.addEventListener('mouseover', eventsOnMouseEvent, false);
       elm.addEventListener('mouseout', eventsOnMouseEvent, false);
+      elm.addEventListener('click', eventsOnMouseEvent, false);
 
       timeoffset += timeinc;
       ++gEventsPending;
@@ -430,8 +431,10 @@ function eventsSendMouseEvent(eventtype, elm)
     /*
         TODO:
         I should check if the document.location OF THE SPIDERED PAGE changed, if it changed, I should go 
-        back in order to continue with the spidering. The document.location approach doesnt work, the problem
-        is that when running from chrome:// , the document.location never changes.
+        back in order to continue with the spidering of the ORIGINAL page. The document.location approach 
+        doesnt work, the problem is that when running from chrome:// , the document.location never changes.
+
+        gSpider.mCurrentUrl.mUrl and gSpider.mDocument.location don't change if the browser changes the page.
     */
 
   dlog('eventsSendMouseEvent exit  : KungFoo ' + gKungFooDeathGrip + 
