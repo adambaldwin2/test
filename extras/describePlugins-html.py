@@ -98,11 +98,11 @@ def createPHP( info ):
         htf.stopPluginType()
     
     try:
-        os.mkdir('generated-php')
+        os.mkdir('extras/generated-php')
     except:
         pass
         
-    outfile = file( 'generated-php/pluginDesc.php', 'w' )
+    outfile = file( 'extras/generated-php/pluginDesc.php', 'w' )
     outfile.write( htf.getHtml() )
     outfile.close()
     
