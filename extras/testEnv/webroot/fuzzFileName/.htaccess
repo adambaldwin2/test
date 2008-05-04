@@ -1,3 +1,0 @@
-Options +FollowSymLinks
-RewriteEngine on
-Rewriterule ^test/(.*)\.html$ f00.php?var=$1
